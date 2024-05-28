@@ -1,0 +1,29 @@
+<div>
+  <% if (data) { %>
+    <article class="card-item">
+      <h2 class="card-currency">
+        <%= data.symbol.base_currency %>
+      </h2>
+      <div>
+        <span>Last Trade Price</span>
+        <span class="ticker">
+           <%= data.ticker.last_trade_price %>
+           
+        </span>
+      </div>
+      <div class="card-info">
+        <div>
+          <span>Counter currency:</span>
+          <span class="card-counter">
+            <%= data.symbol.counter_currency %>
+          </span>
+        </div>
+      </div>
+    </article>
+  <% } %>
+
+  <div id="tag-error" class="tag-error">
+    <!-- Show any errors that were sent from the backend -->
+  </div>
+    
+</div>
