@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app=express();
 const port=3000;
 const API_URL="https://api.blockchain.com"
-const yourBearerToken="8db7fbae-1020-48a2-ab48-eaf230b1be6d"
+const yourBearerToken=process.env.API_KEY;
 const symbol = "BTC-USD";
 
 app.use(express.static(__dirname + '/public'));
